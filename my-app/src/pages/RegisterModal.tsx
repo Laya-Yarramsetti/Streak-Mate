@@ -7,7 +7,7 @@ export default function RegisterModal() {
   return (
     <div className="register-modal-overlay">
       <div className="register-popup">
-        <div className="form">
+        <div className="register-form">
           <input type="text" placeholder="Enter Username" required />
           <input type="email" placeholder="Enter Email" required />
           <input type="password" placeholder="Enter Password" required />
