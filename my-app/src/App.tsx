@@ -9,11 +9,12 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <LoginPage />,
-    errorElement: <div>404 Page Not Found</div>
-  },
-  {
-    path: '/register',
-    element: <RegisterModal />,
+    children: [
+      {
+        path: 'register',
+        element: <RegisterModal />,
+      },
+    ],
     errorElement: <div>404 Page Not Found</div>
   }
 ]);

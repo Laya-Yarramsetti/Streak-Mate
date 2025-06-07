@@ -1,19 +1,25 @@
-import './RegisterModal.css'
+import './RegisterModal.css';
+import { useNavigate } from 'react-router-dom';
 
-export default function RegisterModal(){
-    return(
-        <header className="register-popup">
-            <div>
-                <input type="text" placeholder="Enter Username" name="uname" required />
-                <input type='Email' placeholder='Enter Email' />
-                <input type="password" placeholder="Enter Password" name="psw" required />
-                <button type="submit">Register</button>
-                {/* <input type="checkbox" checked name="remember"> Remember me </input> */}
-            </div>
+export default function RegisterModal() {
+  const navigate = useNavigate();
 
-            <div className="container" >
-            <button className="cancelbtn">Cancel</button>
-            </div>
-        </header>
-    )
+  return (
+    <div className="register-modal-overlay">
+      <div className="register-popup">
+        <div className="form">
+          <input type="text" placeholder="Enter Username" required />
+          <input type="email" placeholder="Enter Email" required />
+          <input type="password" placeholder="Enter Password" required />
+          <button type="submit">Register</button>
+        </div>
+
+        <div className="container">
+          <button className="cancelbtn" onClick={() => navigate('/login')}>
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
