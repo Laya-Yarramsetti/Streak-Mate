@@ -82,3 +82,15 @@
     opacity: 0.85;
   }
   
+  .form-footer {
+    display: flex;
+    /* justify-content: space-between; */
+    width: auto;
+  }
+
+  .form-footer label{
+    /* width: ; */
+    display: flex;
+    padding: 10px ;
+  }
+  
